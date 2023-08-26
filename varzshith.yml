@@ -1,0 +1,9 @@
+---
+- hosts: haproxy
+  gather_facts: true
+  become: true
+  tasks:
+  - name: install haproxy
+    dnf:
+      name: haproxy
+      state: absent
